@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D’Fiore Nails | Elite Mobile Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Marco Premium para el Video */
+        .video-container-premium {
+            grid-column: 1 / -1; 
+            margin-top: 30px;
+            position: relative;
+            padding: 8px;
+            background: linear-gradient(135deg, #c0a080, #1a1a1a); 
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-overlay-text {
+            text-align: center;
+            padding: 12px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: #c0a080;
+            text-transform: uppercase;
+        }
+
+        /* Grid optimizado para 8 imágenes */
+        .gallery-grid-8 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="custom-cursor"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-box" onclick="showSection('home')">
+                <span class="logo-main">D’FIORE</span>
+                <span class="logo-tag">MOBILE.SYS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="javascript:void(0)" onclick="showSection('home')">INICIO</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('nosotros')">NOSOTROS</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('menu')">SERVICIOS</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('galeria')">PORTAFOLIO</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('contacto')">RESERVAR</a></li>
+            </ul>
+            <div class="nav-contact">
+                <a href="https://wa.me/593995178775" target="_blank" class="btn-whatsapp-nav">
+                    <i class="fab fa-whatsapp"></i> <span class="btn-text">SOLICITAR MÓVIL</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="spa-section active">
+        <header class="hero">
+            <div class="hero-video-bg">
+                <div class="tech-mesh-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="status-tag">
+                    <span class="pulse-dot"></span> UNIDAD MÓVIL ACTIVA: GUAYAQUIL
+                </div>
+                <h1 class="main-title">EL SALÓN DE LUJO <br><span class="text-gradient">EN TU HOGAR</span></h1>
+                <div class="hero-subtitle">
+                    <p>Experiencia <strong>High-End</strong> a domicilio. Llevamos la arquitectura de uñas y el spa directamente a tu sala con protocolos de bioseguridad clínica.</p>
+                </div>
+                <div class="hero-stats-row">
+                    <div class="stat"><span class="num">100%</span><span class="lbl">ESTERILIZADO</span></div>
+                    <div class="stat"><span class="num">PREMIUM</span><span class="lbl">PRODUCTOS</span></div>
+                    <div class="stat"><span class="num">VIP</span><span class="lbl">ATENCIÓN</span></div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="showSection('menu')">VER MENÚ DE SERVICIOS</button>
+                    <button class="btn-outline" onclick="showSection('galeria')">VER RESULTADOS</button>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section id="nosotros" class="spa-section">
+        <div class="container flex-layout-hero">
+            <div class="visionary-hero" data-tilt>
+                <div class="ceo-frame">
+                    <img src="https://i.imgur.com/cn9MHYN.jpeg" class="boss-img-large" alt="Fiorella Maner CEO">
+                    <div class="frame-deco"></div>
+                </div>
+            </div>
+            <div class="about-text-content">
+                <h2 class="section-label">NUESTRO ADN</h2>
+                <h3 class="display-title-large">LUJO MÓVIL <br><span class="text-gradient">REDEFINIDO</span></h3>
+                <p class="description">
+                    En D'Fiore Nails, entendimos que el verdadero lujo es el tiempo y la comodidad. Bajo la dirección de <strong>Fiorella Maner</strong>, hemos creado un sistema que transforma tu espacio personal en un spa de alta gama.
+                </p>
+                <div class="signature-box">Fiorella Maner - CEO & Founder</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="spa-section">
+        <div class="container">
+            <h2 class="section-label">MENÚ A DOMICILIO</h2>
+            <div class="pricing-grid-extended">
+                <div class="price-card" data-tilt>
+                    <div class="icon-header"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3>MANICURA RUSA</h3>
+                    <div class="price-value">$25.00</div>
+                    <p class="card-desc">Limpieza profunda de cutícula + Nivelación perfecta.</p>
+                    <button class="btn-card" onclick="showSection('contacto')">AGENDAR</button>
+                </div>
+                <div class="price-card featured" data-tilt>
+                    <div class="featured-badge">FAVORITO</div>
+                    <div class="icon-header"><i class="fas fa-layer-group"></i></div>
+                    <h3>POLYGEL SCULPT</h3>
+                    <div class="price-value">$45.00</div>
+                    <p class="card-desc">Extensión estructural ligera y ultra resistente.</p>
+                    <button class="btn-card" onclick="showSection('contacto')">AGENDAR</button>
+                </div>
+                <div class="price-card" data-tilt>
+                    <div class="icon-header"><i class="fas fa-gem"></i></div>
+                    <h3>SOFT GEL TIPS</h3>
+                    <div class="price-value">$35.00</div>
+                    <p class="card-desc">Extensión express con acabado natural y duradero.</p>
+                    <button class="btn-card" onclick="showSection('contacto')">AGENDAR</button>
+                </div>
+                <div class="price-card" data-tilt>
+                    <div class="icon-header"><i class="fas fa-paint-brush"></i></div>
+                    <h3>NAIL ART PRO</h3>
+                    <div class="price-value">COTIZAR</div>
+                    <p class="card-desc">Diseños a mano alzada, 3D, cristalería y efectos.</p>
+                    <button class="btn-card" onclick="showSection('contacto')">AGENDAR</button>
+                </div>
+                <div class="price-card" data-tilt>
+                    <div class="icon-header"><i class="fas fa-spa"></i></div>
+                    <h3>SPA PEDICURE</h3>
+                    <div class="price-value">$30.00</div>
+                    <p class="card-desc">Limpieza, exfoliación y masaje relax en tus pies.</p>
+                    <button class="btn-card" onclick="showSection('contacto')">AGENDAR</button>
+                </div>
+                <div class="price-card featured" data-tilt>
+                    <div class="featured-badge">PACK</div>
+                    <div class="icon-header"><i class="fas fa-crown"></i></div>
+                    <h3>FULL QUEEN</h3>
+                    <div class="price-value">$50.00</div>
+                    <p class="card-desc">Combo Manos + Pies con tratamiento de hidratación.</p>
+                    <button class="btn-card" onclick="showSection('contacto')">AGENDAR</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="spa-section">
+        <div class="container">
+            <h2 class="section-label">PORTAFOLIO REAL</h2>
+            <div class="gallery-grid-8">
+                <div class="design-card" data-tilt><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=600"><div class="card-tag">RUSSIAN MANICURE</div></div>
+                <div class="design-card" data-tilt><img src="https://i.imgur.com/IFMO6tu.jpeg"><div class="card-tag">MINIMALIST ART</div></div>
+                <div class="design-card" data-tilt><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=600"><div class="card-tag">SOFT GEL SYSTEM</div></div>
+                <div class="design-card" data-tilt><img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=600"><div class="card-tag">CHROME EFFECTS</div></div>
+                <div class="design-card" data-tilt><img src="https://i.imgur.com/8ezXjgy.png"><div class="card-tag">POLYGEL SCULPT</div></div>
+                <div class="design-card" data-tilt><img src="https://i.imgur.com/1CccbTH.jpeg"><div class="card-tag">SPA PEDICURE</div></div>
+                <div class="design-card" data-tilt><img src="https://i.imgur.com/HYDK3sa.jpeg"><div class="card-tag">ELITE CLASSIC</div></div>
+                <div class="design-card" data-tilt><img src="https://i.imgur.com/AX5RcLw.jpeg"><div class="card-tag">BRIDAL STYLE</div></div>
+
+                <div class="video-container-premium">
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/0RKdjyonbWc?autoplay=1&mute=1&loop=1&playlist=0RKdjyonbWc&controls=1&modestbranding=1" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-overlay-text">
+                        <i class="fas fa-crown"></i> D'FIORE EXPERIENCE: THE ART OF PRECISION
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="spa-section">
+        <div class="container">
+            <h2 class="section-label">SOLICITUD DE DESPLIEGUE MÓVIL</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <h3 class="form-title">DATOS DE LA CITA</h3>
+                    <form id="mainContactForm">
+                        <div class="form-group"><label>TU NOMBRE</label><input type="text" id="clientName" placeholder="Ej: María Pérez" required></div>
+                        <div class="form-group"><label>UBICACIÓN (SECTOR)</label><input type="text" id="clientZone" placeholder="Ej: Samborondón, Ceibos..." required></div>
+                        <div class="form-group"><label>SERVICIO DESEADO</label>
+                            <select id="serviceType">
+                                <option>Manicura Rusa</option>
+                                <option>Polygel Sculpt</option>
+                                <option>Soft Gel Tips</option>
+                                <option>Pedicura Spa</option>
+                                <option>Combo Full Queen</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-submit">ENVIAR A WHATSAPP <i class="fab fa-whatsapp"></i></button>
+                    </form>
+                </div>
+                <div class="contact-info-container">
+                    <a href="https://share.google/V7ZB0sFg0Zy48mFaW" target="_blank" class="info-card-link">
+                        <div class="info-card map-card">
+                            <div class="icon-box"><i class="fas fa-map-marked-alt"></i></div>
+                            <div class="text-box">
+                                <h4>VER ZONAS DE COBERTURA</h4>
+                                <p>Clic aquí para ver mapa detallado</p>
+                            </div>
+                            <i class="fas fa-external-link-alt arrow"></i>
+                        </div>
+                    </a>
+                    <div class="info-card">
+                        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                        <div class="text-box">
+                            <h4>BIOSEGURIDAD</h4>
+                            <p>Todo el instrumental es esterilizado y abierto frente al cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">D’FIORE</div>
+                <p class="footer-tagline">Elite Mobile Art Studio.</p>
+                <p class="footer-desc">Llevamos la excelencia del diseño de uñas y el cuidado personal hasta la puerta de tu hogar.</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>ACCESO RÁPIDO</h4>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="showSection('home')">Inicio</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('nosotros')">Nosotros</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('menu')">Servicios</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('galeria')">Portafolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-col social-col">
+                <h4>SÍGUENOS</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/fiorellamaner" target="_blank" class="s-icon insta"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@fiorellamanersara" target="_blank" class="s-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/593995178775" target="_blank" class="s-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="contact-direct">
+                    <span><i class="fas fa-phone"></i> +593 99 517 8775</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 D’Fiore Nails. Todos los derechos reservados.</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
